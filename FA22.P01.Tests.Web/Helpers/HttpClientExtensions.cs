@@ -2,7 +2,8 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 
 namespace FA22.P01.Tests.Web.Helpers;
-
+    
+    
 public static class HttpClientExtensions
 {
     public static Task<HttpResponseMessage> PostAsJsonAsync<T>(this HttpClient httpClient, string url, T data)
@@ -29,4 +30,5 @@ public static class HttpClientExtensions
 
         return JsonConvert.DeserializeObject<T?>(dataAsString);
     }
+}
 }
